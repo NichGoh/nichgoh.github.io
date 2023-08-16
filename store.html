@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product-item {
+            margin: 10px;
+            cursor: pointer;
+        }
+        .product-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .product-details {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+        }
+    </style>
+    <script>
+        function toggleDetails(element) {
+            const allDetails = document.querySelectorAll('.product-details');
+            allDetails.forEach(details => {
+                if (details !== element.querySelector('.product-details')) {
+                    details.style.display = 'none';
+                }
+            });
+            
+            const details = element.querySelector('.product-details');
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our E-Commerce Store</h1>
+    </header>
+    
+    <div class="product-list">
+        <div class="product-item" onclick="toggleDetails(this)">
+            <img class="product-image" src="https://down-sg.img.susercontent.com/file/5fba173d834f2615c08f7cf4f22a6cac" alt="Product Image">
+            <div class="product-details">
+                <h2>3 Month Warranty 116 Plus Smart Watch</h2>
+                <p>Price: $16</p>
+                <p>Specifications: USB direct charging; Display: curved screen 1.3inch TFT color screen 128*128; ... (Add product description)</p>
+            </div>
+        </div>
+        <div class="product-item" onclick="toggleDetails(this)">
+            <img class="product-image" src="https://down-sg.img.susercontent.com/file/97d779cefe642f838f3aa170a554dc52" alt="Product Image">
+            <div class="product-details">
+                <h2>Apple iPhone 14</h2>
+                <p>Price: $1,103.00 - $1,267.00</p>
+                <p>With the most impressive dual-camera system on iPhone. ... (Add product description)</p>
+            </div>
+        </div>
+        <div class="product-item" onclick="toggleDetails(this)">
+            <img class="product-image" src="https://down-sg.img.susercontent.com/file/8b71e612678097f08fcfac10763593eb" alt="Product Image">
+            <div class="product-details">
+                <!-- Product 3 Details -->
+                <h2>Apple AirTag</h2>
+                <p>Price: $42.00 - $135.00</p>
+                <p>AirTag. Keep track of your keys, wallet, luggage, backpack and more, all in the Find My app. ... (Add product description)</p>
+            </div>
+        </div>
+        <!-- Add more product items as needed -->
+    </div>
+    
+</body>
+</html>
