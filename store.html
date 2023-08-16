@@ -7,16 +7,33 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f7;
     margin: 0;
     padding: 0;
   }
 
   header {
+    background-image: url("https://down-sg.img.susercontent.com/file/sg-50009109-4dded9dc62a694c4e39b7b4d83ade027@resize_w960_nl.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #3498db;
-    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 100px 0;
+    position: relative;
+  }
+
+  .header-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(52, 152, 219, 0.7);
+    color: white;
   }
 
   .container {
@@ -30,9 +47,12 @@
     background-color: white;
     border: 1px solid #ddd;
     padding: 20px;
-    margin: 20px;
-    max-width: 300px;
+    margin: 10px;
+    width: 17%; /* Adjusted to be 25% of the parent width */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .product img {
@@ -58,7 +78,6 @@
   }
 
   .add-to-cart-button {
-    margin-top: 10px;
     background-color: #3498db;
     color: white;
     border: none;
@@ -73,40 +92,48 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Our eCommerce Store</h1>
+    <div class="header-text">Welcome to E-Zone</div>
   </header>
 
   <div class="container">
+    <!-- Product 1 -->
     <div class="product">
       <img src="https://down-sg.img.susercontent.com/file/5fba173d834f2615c08f7cf4f22a6cac" alt="Product 1">
       <div class="product-name">3 Month Warranty 116 Plus Smart Watch</div>
       <div class="product-price">$16</div>
       <div class="product-description">
-        Specifications: ... (truncated for brevity)
+        USB Direct Charging <br>
+        Personalized screen display, colorful UI interface design <br>
+        Waterproof
       </div>
       <button class="add-to-cart-button">Add to Cart</button>
     </div>
 
+    <!-- Product 2 -->
     <div class="product">
       <img src="https://down-sg.img.susercontent.com/file/97d779cefe642f838f3aa170a554dc52" alt="Product 2">
       <div class="product-name">Apple iPhone 14</div>
       <div class="product-price">$1,103.00 - $1,267.00</div>
       <div class="product-description">
-        With the most impressive dual-camera system... (truncated for brevity)
+        Dual-camera system <br>
+        Crash detection <br>
+        IOS 16
       </div>
       <button class="add-to-cart-button">Add to Cart</button>
     </div>
 
+    <!-- Product 3 -->
     <div class="product">
       <img src="https://down-sg.img.susercontent.com/file/8b71e612678097f08fcfac10763593eb" alt="Product 3">
       <div class="product-name">Apple Airtag</div>
       <div class="product-price">$42.00 - $135.00</div>
       <div class="product-description">
-        AirTag. Keep track of your keys, wallet... (truncated for brevity)
+        AirTag. Keep track of your keys, wallet, luggage, backpack and more, all in the Find My app.
       </div>
       <button class="add-to-cart-button">Add to Cart</button>
     </div>
   </div>
 </body>
 </html>
+
 
